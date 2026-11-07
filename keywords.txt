@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For CISIoT
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+CISIoT	KEYWORD1
+CISIoTClient	KEYWORD1
+CISIoTCommandCallback	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+setFallbackBaseUrl	KEYWORD2
+setMaxFailsBeforeReboot	KEYWORD2
+enableWatchdog	KEYWORD2
+feedWatchdog	KEYWORD2
+reconnectWiFi	KEYWORD2
+onCommand	KEYWORD2
+sendEnvironment	KEYWORD2
+virtualWrite	KEYWORD2
+reportStatus	KEYWORD2
+reportDoorStatus	KEYWORD2
+pollCommands	KEYWORD2
+ackCommands	KEYWORD2
+isConnected	KEYWORD2
+localIP	KEYWORD2
