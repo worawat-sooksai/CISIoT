@@ -75,29 +75,7 @@ hardware/
 
 ---
 
-## 3. ขั้นตอนการนำโฟลเดอร์ `hardware/` ขึ้น GitHub เพื่อให้ค้นหาใน Arduino IDE ได้
-
-1. สร้าง Public Repository บน GitHub เช่น `https://github.com/scidi-tsu/CISIoT`
-2. อัปโหลดไฟล์ทั้งหมดในโฟลเดอร์ `hardware/` ขึ้นไปที่ Root ของ Repository:
-   ```bash
-   cd d:/work/system_cisiot/hardware
-   git init
-   git add .
-   git commit -m "Initial release of CISIoT Arduino Library v1.0.0"
-   git branch -M main
-   git remote add origin https://github.com/<ชื่อผู้ใช้หรือองค์กร>/CISIoT.git
-   git push -u origin main
-   ```
-3. สร้าง **Git Tag / Release** เวอร์ชัน `1.0.0` (ต้องตรงกับค่า `version=1.0.0` ในไฟล์ `library.properties`):
-   ```bash
-   git tag 1.0.0
-   git push origin 1.0.0
-   ```
-4. ส่ง URL ของ GitHub Repository ไปที่ [Arduino Library Registry (`arduino/library-registry`)](https://github.com/arduino/library-registry) โดยเปิด Pull Request เพิ่มลิงก์ Git Repository ในไฟล์ `repositories.txt` เมื่อบอทตรวจสอบผ่านแล้ว ไลบรารี `CISIoT` จะปรากฏในช่องค้นหาของ Arduino IDE ทั่วโลกทันที
-
----
-
-## 4. ตัวอย่างการเขียนโค้ดใช้งานไลบรารี (`#include <CISIoT.h>`)
+## 3. ตัวอย่างการเขียนโค้ดใช้งานไลบรารี (`#include <CISIoT.h>`)
 
 ```cpp
 #include <CISIoT.h>
@@ -135,7 +113,7 @@ void loop() {
 
 ---
 
-## 5. คำสั่งหลักของคลาส `CISIoT`
+## 4. คำสั่งหลักของคลาส `CISIoT`
 
 | เมธอด / ฟังก์ชัน | คำอธิบาย |
 | :--- | :--- |
