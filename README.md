@@ -6,50 +6,7 @@
 
 ---
 
-## 1. โครงสร้างไฟล์มาตรฐานในโฟลเดอร์ `hardware/` (สำหรับ Push ขึ้น GitHub)
-
-```text
-hardware/
-├── library.properties                          # ข้อมูลเมตาของไลบรารีสำหรับ Arduino Library Manager (Searchable)
-├── library.json                                # ข้อมูลเมตาสำหรับ PlatformIO Registry
-├── keywords.txt                                # การเน้นสีคำสั่ง (Syntax Highlighting) ใน Arduino IDE
-├── LICENSE                                     # สัญญาอนุญาตแบบเปิด (MIT License)
-├── README.md                                   # คู่มือการใช้งานภาษาไทยฉบับสมบูรณ์
-├── .github/
-│   └── workflows/
-│       └── arduino-lint.yml                    # GitHub Actions ตรวจสอบความถูกต้องของไลบรารีอัตโนมัติ
-├── src/                                        # ชุดไฟล์ Header (.h) และ Implementation (.cpp)
-│   ├── CISIoT.h                                # Header หลักของไลบรารี (#include <CISIoT.h>)
-│   ├── CISIoT.cpp                              # ซอร์สโค้ดการทำงานหลัก (.cpp)
-│   ├── CISIoT_ESP32.h                          # คอนฟิกเฉพาะบอร์ด ESP32 (Watchdog + Secure Client)
-│   ├── CISIoT_ESP8266.h                        # คอนฟิกเฉพาะบอร์ด ESP8266 (BearSSL)
-│   └── CISIoT_UnoQ.h                           # ตัวช่วยเชื่อมต่อสำหรับ Arduino UNO R4 WiFi / UNO Q
-├── examples/                                   # โค้ดตัวอย่างที่จะปรากฏในเมนู File -> Examples -> CISIoT
-│   ├── ESP32_BME280_Door/
-│   │   └── ESP32_BME280_Door.ino               # ตัวอย่าง ESP32 ส่งค่าอุณหภูมิ/ความชื้น + สั่งเปิด/ปิดประตู + Watchdog
-│   ├── ESP8266_Basic/
-│   │   └── ESP8266_Basic.ino                   # ตัวอย่าง ESP8266 NodeMCU ส่งค่าเซ็นเซอร์และรับคำสั่งสวิตช์
-│   ├── Arduino_UnoQ_Blink/
-│   │   └── Arduino_UnoQ_Blink.ino              # ตัวอย่าง Arduino UNO R4 WiFi / UNO Q ควบคุมไฟ LED
-│   └── VirtualPins_Dashboard_Demo/
-│       └── VirtualPins_Dashboard_Demo.ino      # ตัวอย่างครบทุก Widget (Switch, Input Field, Gauge, Text LogStream)
-├── extras/
-│   ├── arduino_core/
-│   │   └── cisiot_boards/
-│   │       ├── boards.txt                      # นิยามบอร์ดสำหรับ Additional Boards Manager URLs
-│   │       └── platform.txt
-│   └── rpi5/
-│       └── cisiot_client.py                    # สคริปต์ Python สำหรับ Raspberry Pi 5 (ใช้ gpiozero/gpiod รองรับชิป RP1)
-├── dist/                                       # ไฟล์แพ็กเกจ .zip และ JSON ที่บิลด์พร้อมแจกจ่าย
-│   ├── CISIoT-Library.zip
-│   ├── cisiot-boards-1.0.0.zip
-│   └── package_cisiot_index.json
-└── build_packages.php                          # สคริปต์สร้างไฟล์ .zip และคำนวณ SHA-256 Checksum อัตโนมัติ
-```
-
----
-
-## 2. วิธีการติดตั้งไลบรารีในโปรแกรม Arduino IDE
+## 1. วิธีการติดตั้งไลบรารีในโปรแกรม Arduino IDE
 
 ผู้ใช้งานสามารถติดตั้งไลบรารี `CISIoT` ได้ **3 วิธี** ดังนี้:
 
@@ -75,7 +32,7 @@ hardware/
 
 ---
 
-## 3. ตัวอย่างการเขียนโค้ดใช้งานไลบรารี (`#include <CISIoT.h>`)
+## 2. ตัวอย่างการเขียนโค้ดใช้งานไลบรารี (`#include <CISIoT.h>`)
 
 ```cpp
 #include <CISIoT.h>
@@ -113,7 +70,7 @@ void loop() {
 
 ---
 
-## 4. คำสั่งหลักของคลาส `CISIoT`
+## 3. คำสั่งหลักของคลาส `CISIoT`
 
 | เมธอด / ฟังก์ชัน | คำอธิบาย |
 | :--- | :--- |
